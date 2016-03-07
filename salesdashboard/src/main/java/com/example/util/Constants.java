@@ -14,11 +14,14 @@ public class Constants {
     public static final String EXT_API_URL_PROP_KEY = "url";
 
     // subscribed API (API-M)
+    public static final String SUBSCRIBED_API_RESOURCE_PATH = "SubscribedAPI.RegionalData.ResourcePath";
     public static final String SUBSCRIBED_API_CONSUMER_KEY_PROP_KEY = "ConsumerKey";
     public static final String SUBSCRIBED_API_CONSUMER_SECRET_PROP_KEY = "ConsumerSecret";
     public static final String SUBSCRIBED_API_URL_PROP_KEY = "Key";
 
     public static final String TOKEN_URL_PROP_KEY = "tokenUrl";
     public static final String DEFAULT_TOKEN_URL = "https://gateway.apimanager.appfactory.private.wso2.com:8249/token";
+
+    public static final String SALES_DATA_API_PROP_KEY = "salesDataApi";
 
 }

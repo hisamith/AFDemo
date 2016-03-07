@@ -15,7 +15,7 @@ public class Util {
 
     private static Log log = LogFactory.getLog(Util.class);
 
-    public static String getResourceFromRegistry(String resourcePath) throws Exception {
+    private static String getResource(String resourcePath) throws Exception {
         String propValue = null;
         CarbonContext cCtx = CarbonContext.getThreadLocalCarbonContext();
         Registry registry = (Registry) cCtx.getRegistry(RegistryType.SYSTEM_GOVERNANCE);
@@ -43,13 +43,13 @@ public class Util {
         String resourcePath = "/dependencies/" +
                               ConfigUtil.getPropertyValue(Constants.CONFIG_APP_KEY) + "/" +
                               ConfigUtil.getPropertyValue(Constants.CONFIG_EXTERNAL_API_NAME) + "/" + propName;
-        return getResourceFromRegistry(resourcePath);
+        return getResource(resourcePath);
     }
 
-    public static String getSubscribedApiValue(String propName) throws Exception {
+    public static String getResourceFromRegistry(String propName) throws Exception {
         String resourcePath = "/dependencies/" +
                               ConfigUtil.getPropertyValue(Constants.CONFIG_APP_KEY) + "/" + propName;
-        return getResourceFromRegistry(resourcePath);
+        return getResource(resourcePath);
     }
 
 }

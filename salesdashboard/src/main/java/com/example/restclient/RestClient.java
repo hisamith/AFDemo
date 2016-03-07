@@ -50,15 +50,17 @@ public class RestClient {
 
     public DashboardDataHolder getRegionalData() throws Exception {
 
-        String regionalDataApi = Util.getExternalApiValue(Constants.SUBSCRIBED_API_URL_PROP_KEY);
-        String consumerKey = Util.getExternalApiValue(Constants.SUBSCRIBED_API_CONSUMER_KEY_PROP_KEY);
-        String consumerSecret = Util.getExternalApiValue(Constants.SUBSCRIBED_API_CONSUMER_SECRET_PROP_KEY);
+        String regionalDataApi = Util.getResourceFromRegistry(Constants.SALES_DATA_API_PROP_KEY) + "/" +
+                                 ConfigUtil.getPropertyValue(Constants.SUBSCRIBED_API_RESOURCE_PATH);
+        String consumerKey = Util.getResourceFromRegistry(Constants.SUBSCRIBED_API_CONSUMER_KEY_PROP_KEY);
+        String consumerSecret = Util.getResourceFromRegistry(Constants.SUBSCRIBED_API_CONSUMER_SECRET_PROP_KEY);
         String accessToken = getAccessToken(tokenUrl, consumerKey, consumerSecret);
         GetMethod getMethod = getHTTPGetMethod(regionalDataApi, accessToken);
         List<CountryData> countryDataList = new ArrayList<>();
         JSONObject countryMapData = new JSONObject();
         DashboardDataHolder dashboardDataHolder;
         try {
+            log.info(" Calling sales api : "+ regionalDataApi);
             int httpStatusCode = executeMethod(getMethod);
             if (HttpStatus.SC_OK == httpStatusCode) {
                 Object obj = getresponseJSONObject(getMethod);
@@ -100,6 +102,7 @@ public class RestClient {
         GetMethod getMethod = getHTTPGetMethod(statsApi, accessToken);
         Stats stats;
         try {
+            log.info(" Calling stats api : "+ statsApi);
             int httpStatusCode = executeMethod(getMethod);
             if (HttpStatus.SC_OK == httpStatusCode) {
                 Object obj = getresponseJSONObject(getMethod);
