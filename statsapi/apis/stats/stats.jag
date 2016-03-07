@@ -1,0 +1,97 @@
+<%
+var log = new Log();
+(function () {
+    if(request.getMethod() == "GET"){
+        var today = new Date();
+        var totalLeads = Math.floor(Math.abs((today.getTime() / 100000000))) + randomIntFromInterval(-100 , 100)  ;
+        var totalSales = Math.floor(Math.abs((today.getTime() / 1000000000))) + 1;
+        var newCustomers = Math.floor(Math.abs((today.getTime() / 10000000000)));
+        var stock = randomIntFromInterval(18,23);
+        var globalMarketShare = {
+            "Samsung" : 23.9,
+            "Apple" : 17.2,
+            "Huawei" : 8.0,
+            "Lenovo" : 5.5,
+            "Xiaomi": 5.3,
+            "LG" : 4.4
+        };
+        var monthlySalesData = getSalesDataMonthly();
+        var stats = {
+            "totalLeads":totalLeads,
+            "totalSales":totalSales,
+            "newCustomers": newCustomers,
+            "stock":stock,
+            "globalMarketShare": globalMarketShare,
+            "monthlySalesData" : monthlySalesData
+        };
+        log.info("Sending Stats...");
+        print(stats);
+    }
+}());
+
+function randomIntFromInterval(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+
+function genArray(monthlySalesData){
+    var data = {
+        labels: [],
+        datasets: [
+            {
+                label: "Last Year",
+                fillColor: "rgba(220,220,220,0.5)",
+                strokeColor: "rgba(220,220,220,0.8)",
+                highlightFill: "rgba(220,220,220,0.75)",
+                highlightStroke: "rgba(220,220,220,1)",
+                data: []
+            },
+            {
+                label: "This Year",
+                fillColor: "rgba(151,187,205,0.5)",
+                strokeColor: "rgba(151,187,205,0.8)",
+                highlightFill: "rgba(151,187,205,0.75)",
+                highlightStroke: "rgba(151,187,205,1)",
+                data: []
+            }
+        ]
+    };
+
+    for (var i = 0; i < monthlySalesData.length; i++) {
+        data.labels.push(monthlySalesData[i]["month"]);
+        data.datasets[0].data.push(monthlySalesData[i]["lastYear"]);
+        data.datasets[1].data.push(monthlySalesData[i]["thisYear"]);
+    }
+    return data;
+}
+
+function getSalesDataMonthly(){
+
+    var monthNames = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"
+    ];
+    var today = new Date();
+    var monthlySalesData = [];
+
+
+    for (var i = 0 ; i <12 ; i++){
+
+        // why? refer to below link
+        //http://stackoverflow.com/questions/4467539/javascript-modulo-not-behaving
+        var monthNumber = (((today.getMonth() - i) % 12)+12)%12;
+
+        var month = monthNames[monthNumber];
+        var lastYear = 500000 + Math.round(Math.floor((Math.random() * 500000) + 1));
+        var thisYear = lastYear + Math.round(((Math.random() * 200000) + 1))
+        monthlySalesData.push({
+            "month" :month,
+            "lastYear" : lastYear,
+            "thisYear" : thisYear
+        });
+
+    }
+    return monthlySalesData;
+}
+
+%>

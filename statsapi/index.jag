@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Swagger UI</title>
+
+    <link href='css/typography.css' media='screen' rel='stylesheet' type='text/css'/>
+    <link href='css/reset.css' media='screen' rel='stylesheet' type='text/css'/>
+    <link href='css/screen.css' media='screen' rel='stylesheet' type='text/css'/>
+<body class="swagger-section" cz-shortcut-listen="true">
+
+<div id="message-bar" class="swagger-ui-wrap message-success" data-sw-translate=""></div>
+<div id="swagger-ui-container" class="swagger-ui-wrap">
+    <div class="info" id="api_info">
+        <div class="info_title">Sample Statistcs API</div>
+        <div class="info_description markdown"></div>
+    </div>
+    <div class="container" id="resources_container">
+        <ul id="resources">
+            <li id="resource_default" class="resource active">
+                <ul class="endpoints" id="default_endpoint_list">
+                    <li class="endpoint">
+                        <ul class="operations">
+                            <li class="get operation" id="default_get_stats">
+                                <div class="heading">
+                                    <h3>
+                                                <span class="http_method">
+                                                <a href="stats" class="toggleOperation">get</a>
+                                                </span>
+                                                <span class="path">
+                                                <a href="stats" class="toggleOperation ">/stats</a>
+                                                </span>
+                                    </h3>
+                                    <ul class="options">
+                                        <li>
+                                            <a href="#"
+                                               class="toggleOperation"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content" id="default_get_stats_content">
+                                    <h4><span data-sw-translate="">Implementation Notes</span></h4>
+                                    <div class="markdown">
+                                        <p>Gets sample statistics</p>
+                                    </div>
+                                    <h4><span data-sw-translate="">Response Class</span> (<span data-sw-translate="">Status</span>
+                                                                                         200)
+                                    </h4>
+                                    <div class="markdown">
+                                        <p>Successful response</p>
+                                    </div>
+                                    <p>
+                                                <span class="model-signature">
+                                            <div>
+                                                <div>
+
+                                                    <div>
+                                                        <div class="signature-container">
+                                                            <div class="description" style="display: none;">
+                                                                <span class="strong">inline_model {</span>
+                                                                <div><span class="propName ">totalLeads</span> (<span
+                                                                        class="propType">integer</span>, <span
+                                                                        class="propOptKey">optional</span>),
+                                                                </div>
+                                                                <div><span class="propName ">totalSales</span> (<span
+                                                                        class="propType">integer</span>, <span
+                                                                        class="propOptKey">optional</span>),
+                                                                </div>
+                                                                <div><span class="propName ">newCustomers</span> (<span
+                                                                        class="propType">integer</span>, <span
+                                                                        class="propOptKey">optional</span>),
+                                                                </div>
+                                                                <div><span class="propName ">stock</span> (<span
+                                                                        class="propType">integer</span>, <span
+                                                                        class="propOptKey">optional</span>),
+                                                                </div>
+                                                                <div><span class="propName ">globalMarketShare</span> (<span
+                                                                        class="propType">Inline Model 1</span>, <span
+                                                                        class="propOptKey">optional</span>),
+                                                                </div>
+                                                                <div><span class="propName ">monthlySalesData</span> (<span
+                                                                        class="propType">Array[Inline Model 2]</span>, <span
+                                                                        class="propOptKey">optional</span>)
+                                                                </div>
+                                                                <span class="strong">}</span><br><span class="strong">Inline Model 1 {</span>
+                                                                <div><span class="propName ">attributes</span> (<span
+                                                                        class="propType">string</span>, <span
+                                                                        class="propOptKey">optional</span>)
+                                                                </div>
+                                                                <span class="strong">}</span><br><span class="strong">Inline Model 2 {</span>
+                                                                <div><span class="propName ">month</span> (<span
+                                                                        class="propType">string</span>, <span
+                                                                        class="propOptKey">optional</span>),
+                                                                </div>
+                                                                <div><span class="propName ">lastYear</span> (<span
+                                                                        class="propType">integer</span>, <span
+                                                                        class="propOptKey">optional</span>),
+                                                                </div>
+                                                                <div><span class="propName ">thisYear</span> (<span
+                                                                        class="propType">integer</span>, <span
+                                                                        class="propOptKey">optional</span>)
+                                                                </div>
+                                                                <span class="strong">}</span>
+                                                            </div>
+                                                            <div class="snippet" style="display: block;">
+<pre><code class="json">{
+    "<span class="attribute">totalLeads</span>": <span class="value"><span class="number">"integer"</span></span>,
+    "<span class="attribute">totalSales</span>": <span class="value"><span class="number">"integer"</span></span>,
+    "<span class="attribute">newCustomers</span>": <span class="value"><span class="number">"float"</span></span>,
+    "<span class="attribute">stock</span>": <span class="value"><span class="number">"integer"</span></span>,
+    "<span class="attribute">globalMarketShare</span>": <span class="value">{
+        "<span class="attribute">attributes</span>": <span class="value"><span class="string">"string"</span>
+    }</span></span>,
+    "<span class="attribute">monthlySalesData</span>": <span class="value">[
+        {
+            "<span class="attribute">month</span>": <span class="value"><span class="string">"string"</span></span>,
+            "<span class="attribute">lastYear</span>": <span class="value"><span class="number">"integer"</span></span>,
+            "<span class="attribute">thisYear</span>": <span class="value"><span class="number">"integer"</span>
+        }</span>
+    ]
+}</span></code>
+                                                                <small class="notice" data-sw-translate=""></small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div></span></p>
+                                    <br>
+
+                                    <div class="response" style="display:none">
+                                        <h4 class="curl">Curl</h4>
+                                        <div class="block curl"></div>
+                                        <h4 data-sw-translate="">Request URL</h4>
+                                        <div class="block request_url"></div>
+                                        <h4 data-sw-translate="">Response Body</h4>
+                                        <div class="block response_body"></div>
+                                        <h4 data-sw-translate="">Response Code</h4>
+                                        <div class="block response_code"></div>
+                                        <h4 data-sw-translate="">Response Headers</h4>
+                                        <div class="block response_headers"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+</html>
