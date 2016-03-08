@@ -1,0 +1,76 @@
+{
+  "totalLeads": 14622.0,
+  "totalSales": 1458.0,
+  "newCustomers": 145.0,
+  "stock": 21.0,
+  "globalMarketShare": {
+    "Samsung": 23.9,
+    "Apple": 17.2,
+    "Huawei": 8,
+    "Lenovo": 5.5,
+    "Xiaomi": 5.3,
+    "LG": 4.4
+  },
+  "monthlySalesData": [
+    {
+      "month": "March",
+      "lastYear": 583898.0,
+      "thisYear": 714804.0
+    },
+    {
+      "month": "February",
+      "lastYear": 791149.0,
+      "thisYear": 804935.0
+    },
+    {
+      "month": "January",
+      "lastYear": 605776.0,
+      "thisYear": 752559.0
+    },
+    {
+      "month": "December",
+      "lastYear": 736261.0,
+      "thisYear": 896754.0
+    },
+    {
+      "month": "November",
+      "lastYear": 978353.0,
+      "thisYear": 1067570.0
+    },
+    {
+      "month": "October",
+      "lastYear": 882042.0,
+      "thisYear": 970656.0
+    },
+    {
+      "month": "September",
+      "lastYear": 854813.0,
+      "thisYear": 976460.0
+    },
+    {
+      "month": "August",
+      "lastYear": 557380.0,
+      "thisYear": 583297.0
+    },
+    {
+      "month": "July",
+      "lastYear": 739501.0,
+      "thisYear": 938234.0
+    },
+    {
+      "month": "June",
+      "lastYear": 755309.0,
+      "thisYear": 789683.0
+    },
+    {
+      "month": "May",
+      "lastYear": 532925.0,
+      "thisYear": 662911.0
+    },
+    {
+      "month": "April",
+      "lastYear": 559139.0,
+      "thisYear": 700714.0
+    }
+  ]
+}
