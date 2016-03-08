@@ -36,7 +36,7 @@ To deploy these applications, please follow below steps.
 
     [https://apimanager.appfactory.private.wso2.com:9449/publisher](https://apimanager.appfactory.private.wso2.com:9449/publisher)
 
-    Then create and publish an API providing above url as the Production and Sandbox endpoint. (Please refer [1] and [1] for more information). 
+    Then create and publish an API providing above url as the Production and Sandbox endpoint. (Please refer [1](https://docs.wso2.com/display/AM190/WSO2+API+Manager+Documentation) and [2](https://docs.wso2.com/display/AM190/Create+and+Publish+an+API) for more information). 
 
   5. Log into API store
 
@@ -110,11 +110,11 @@ To deploy these applications, please follow below steps.
 
     8. Clone the repository and **checkout the 1.0.0 branch.**
 
-    9. Open the pom.xml and markdown the artifactId element
+    9. Open the pom.xml and markdown the artifactId element and name element
 
     10. Replace the src folder with AFDemo/salesdata/src/ folder and replace the pom.xml with AFDemo/salesdata/pom.xml
 
-    11. Open the pom.xml and change the artifactId to the artifactId that you have marked down at step IX.
+    11. Open the pom.xml and change the artifactId to the artifactId, and name to name that you have marked down at step ix.
 
     12. Build, Commit and push the changes.
 
@@ -126,7 +126,7 @@ To deploy these applications, please follow below steps.
 
     16. You can see the rest API exposed by this application, by going to the url <LAUNCH_URL>/services/sales/regionalData 
 
-6. Prome the Sales Data API upto the Production stage.
+6. Promote the Sales Data API upto the Production stage.
 
     1. Promoting to the Testing Stage
 
@@ -158,7 +158,7 @@ To deploy these applications, please follow below steps.
 
       [https://apimanager.appfactory.private.wso2.com:9449/publisher](https://apimanager.appfactory.private.wso2.com:9449/publisher)
 
-      Then create and publish an API providing the Development launch URL that you have copied in the 5.IX step as the Sandbox endpoint and Production launch URL that you have copied in the 6.B.V as the Production Endpoint . (Please refer [1] and [1] for more information). 
+      Then create and publish an API providing the Development launch URL that you have copied in the 5.IX step as the Sandbox endpoint and Production launch URL that you have copied in the 6.B.V as the Production Endpoint . (Please refer [1](https://docs.wso2.com/display/AM190/WSO2+API+Manager+Documentation) and [2](https://docs.wso2.com/display/AM190/Create+and+Publish+an+API) for more information). 
 
 1. Create Sales dashboard.
 
@@ -192,13 +192,13 @@ To deploy these applications, please follow below steps.
 
     6. Clone the repository and **checkout the 1.0.0 branch.**
 
-    7. Open the pom.xml and markdown the artifactId element
+    7. Open the pom.xml and markdown the artifactId element and name element
 
     8. Replace the src folder with AFDemo/salesdashboard/src/ folder and replace the pom.xml with AFDemo/salesdashboard/pom.xml
 
-    9. Open the pom.xml and change the artifactId to the artifactId that you have marked down at step VII.
+    9. Open the pom.xml and change the artifactId to the artifactId, and name to name that you have marked down at step vii.
 
-    10. Open the src/main/resources/config.properties file and Change the value of the "ApplicationKey" element to the artifactId that you have marked down at step VII.
+    10. Open the src/main/resources/config.properties file and Change the value of the "ApplicationKey" element to the artifactId that you have marked down at step vii.
 
     11. Build, Commit and push the changes.
 
