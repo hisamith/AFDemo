@@ -206,6 +206,12 @@ To deploy these applications, please follow below steps.
 
     13. Once version 1.0.0 is successfully deployed go to the launch url and you will see the Nice Dashboard application.
 
+**Screencast**
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=dP2h1LKUoKc
+" target="_blank"><img src="http://img.youtube.com/vi/dP2h1LKUoKc/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
 **References**
 
 [1] https://docs.wso2.com/display/AM190/WSO2+API+Manager+Documentation
